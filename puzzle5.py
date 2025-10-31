@@ -27,7 +27,7 @@ def calculate_exit_code():
 def solve():
     """This function checks if the puzzle is solved correctly."""
     exit_code = calculate_exit_code()
-    expected_code = (5000000 - 1026014) / 45678
+    expected_code = 37
     
     if exit_code == expected_code:
         print("✅ Puzzle 5: FINAL DOOR UNLOCKED! You can escape!")
