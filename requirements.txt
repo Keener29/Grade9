@@ -1,0 +1,4 @@
+# No external dependencies required!
+# This escape room uses only Python's built-in libraries.
+# Python 3.6 or higher recommended.
+
