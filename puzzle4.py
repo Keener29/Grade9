@@ -17,7 +17,7 @@ def create_sequence():
     sequence.append("BLUE")
     
     # BUG: Typo in function name! Should be 'append' not 'add'
-    sequence.add("YELLOW")  # BUG: Should be 'append' not 'add'!
+    sequence.append("YELLOW")  # BUG: Should be 'append' not 'add'!
     
     return sequence
 
@@ -25,7 +25,7 @@ def check_sequence(seq):
     """Check if the sequence is correct."""
     correct_sequence = ["RED", "GREEN", "BLUE", "YELLOW"]
     
-    if sequence == correct_sequence:  # BUG: Should be 'seq' not 'sequence'!
+    if seq == correct_sequence:  # BUG: Should be 'seq' not 'sequence'!
         return True
     return False
 
@@ -34,7 +34,7 @@ def solve():
     sequence = create_sequence()
     
     # BUG: Wrong function name! Should be 'check_sequence' not 'validate_sequence'
-    if validate_sequence(sequence):
+    if check_sequence(sequence):
         print("✅ Puzzle 4: Lasers disabled! Sequence is correct!")
         print(f"   Sequence: {' → '.join(sequence)}")
         return True

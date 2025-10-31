@@ -12,17 +12,17 @@ def calculate_password():
     password = 0
     
     # BUG: This is the wrong year!
-    electric_mind_first_year = 2026 # TODO: Lookup what year Electric Mind started
+    electric_mind_first_year = 1990 # TODO: Lookup what year Electric Mind started
     for num in range(1, electric_mind_first_year):
         # BUG: Wrong comparison! Should check if num is even, not odd
-        if num % 2 != 0:  # BUG: Should be == 0 to check for even numbers!
+        if num % 2 == 0:  # BUG: Should be == 0 to check for even numbers!
             password = password + num
     return password
 
 def solve():
     """This function checks if the puzzle is solved correctly."""
     password = calculate_password()
-    expected_password = 990025
+    expected_password = 989030
     
     # This check must be correct - it's not a bug to fix
     if password == expected_password:

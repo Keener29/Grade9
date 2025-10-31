@@ -9,6 +9,7 @@ CLUE: Python needs to know about functions from other modules. How do you bring 
 
 # BUG: Missing import! We need the 'random' module
 # Remove this comment and add the import statement! TODO: Lookup what module we need to import
+from random import randint
 
 def generate_combination():
     """Generate a 4-digit combination code."""
@@ -22,8 +23,8 @@ def generate_combination():
 
 def check_combination(code):
     """Check if the combination is valid (all digits between 0-9)."""
-    if len(comb) == 4:  # BUG: Variable should be 'code' not 'comb'
-        for digit in comb:  # BUG: Should be 'code' not 'comb'
+    if len(code) == 4:  # BUG: Variable should be 'code' not 'comb'
+        for digit in code:  # BUG: Should be 'code' not 'comb'
             if not (0 <= digit <= 9):
                 return False
         return True

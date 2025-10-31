@@ -11,11 +11,11 @@ def decode_message(encoded_message):
     """Decode the message by reversing it and converting to uppercase."""
     # BUG: String slicing syntax is wrong! Should be [::-1] to reverse
     # BUG: Missing the second colon! [:-1] only removes the last character, not reverses
-    decoded = encoded_message[:-1]  # BUG: Should be [::-1] to reverse the entire string!
+    decoded = encoded_message[::-1]  # BUG: Should be [::-1] to reverse the entire string!
     
     # BUG: Should convert to uppercase, but using wrong method name
     # Python strings use .upper() not .uppercase()
-    decoded = decoded.uppercase()  # BUG: Should be .upper() not .uppercase()!
+    decoded = decoded.upper()  # BUG: Should be .upper() not .uppercase()!
     
     return decoded
 
